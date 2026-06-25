@@ -7,9 +7,12 @@ Utility untuk menampilkan dan filter Linux groups dengan berbagai opsi sorting d
 ```
 linux-groups-list/
 ├── 📄 install.sh              # Installer script (local)
-├── 📄 README.md               # User guide
-├── 📄 START-HERE.md           # Quick start guide
-├── 📄 QUICKSTART.md           # Quick reference
+├── 📄 uninstall.sh            # Uninstaller script (auto-detect)
+├── 📄 README.md               # Project overview
+├── 📄 DOCUMENTATION.md        # User guide - cara penggunaan
+├── 📄 START-HERE.md           # Quick start - 5 menit setup
+├── 📄 QUICKSTART.md           # Quick reference - commands
+├── 📄 UNINSTALL.md            # Uninstall guide
 ├── 📄 .gitignore              # Git configuration
 │
 ├── 📁 src/                    # Source code & executables
@@ -17,15 +20,35 @@ linux-groups-list/
 │   ├── deploy.sh              # Deployment script (remote)
 │   ├── lib/
 │   │   └── groups-lib.sh      # Library dengan core functions
+│   ├── completion/            # Shell completions
+│   │   ├── groups-list.bash
+│   │   ├── groups-list.zsh
+│   │   ├── groups-list.fish
+│   │   └── README.md
 │   └── examples/
 │       └── custom-usage.sh    # Usage examples
 │
 └── 📁 docs/                   # Technical documentation
-    ├── DEVELOPMENT.md         # Developer guide
+    ├── DEVELOPMENT.md         # Developer guide - how to extend
     ├── CHANGELOG.md           # Version history
-    ├── INDEX.md               # File index
+    ├── INDEX.md               # File index & navigation
     └── STRUCTURE.txt          # Architecture overview
 ```
+
+## 📚 Documentation
+
+Panduan lengkap untuk menggunakan dan mengembangkan groups-list:
+
+| Dokumentasi | Tujuan | Waktu |
+|---|---|---|
+| **[START-HERE.md](START-HERE.md)** | 🚀 Mulai dari sini - 5 menit setup | 5 min |
+| **[QUICKSTART.md](QUICKSTART.md)** | ⚡ Quick reference untuk commands | 5 min |
+| **[DOCUMENTATION.md](DOCUMENTATION.md)** | 📖 Panduan lengkap cara penggunaan | 20 min |
+| **[UNINSTALL.md](UNINSTALL.md)** | 🗑️ Cara uninstall dengan auto-detect | 5 min |
+| **[DEVELOPMENT.md](docs/DEVELOPMENT.md)** | 👨‍💻 Developer guide untuk extend | 15 min |
+| **[CHANGELOG.md](docs/CHANGELOG.md)** | 📝 Version history & changes | 3 min |
+
+---
 
 ## 🚀 Quick Start
 
