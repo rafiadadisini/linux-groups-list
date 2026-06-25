@@ -33,14 +33,26 @@ linux-groups-list/
 
 ```bash
 # Install ke /usr/local (recommended)
-./install.sh
+sudo ./install.sh
 
-# Install ke custom path
+# Install ke custom path (no sudo needed)
 ./install.sh -p ~/.local
 
 # Uninstall
 ./install.sh -u
 ```
+
+**Installer akan otomatis:**
+- ✅ Copy binary ke PATH
+- ✅ Copy library files
+- ✅ Update shell configs (bash, zsh, fish)
+- ✅ Install shell completions
+- ✅ Set proper permissions
+
+**Setelah install:**
+- Buka terminal baru, ATAU
+- Jalankan: `source ~/.bashrc` (bash) / `source ~/.zshrc` (zsh)
+- Ketik: `groups-list -h`
 
 ### 2. Deploy ke Komputer Lain
 
@@ -216,6 +228,24 @@ groups-list -m
 # All fields dengan members
 groups-list -a -m
 ```
+
+## 🎯 Shell Completions
+
+Installer otomatis setup completions untuk semua shell. Setelah install, coba:
+
+```bash
+# Bash/Zsh/Fish - tekan TAB untuk auto-complete
+groups-list -[TAB]           # List semua options
+groups-list -f [TAB]         # Suggest common groups
+groups-list -L [TAB]         # Suggest GID values
+```
+
+Completions tersedia untuk:
+- **Bash**: `/etc/bash_completion.d/groups-list`
+- **Zsh**: `/usr/share/zsh/site-functions/_groups-list`
+- **Fish**: `/usr/share/fish/vendor_completions.d/groups-list.fish`
+
+Lihat `src/completion/README.md` untuk manual installation.
 
 ## 🔌 Integration dengan Script Lain
 

@@ -11,9 +11,18 @@ cd ~/claude-workspace/linux-groups-list
 sudo ./install.sh
 ```
 
-Gunakan command:
+**Installer otomatis:**
+- ✅ Update shell configs (bash, zsh, fish)
+- ✅ Install completions
+- ✅ Setup PATH
 
+**Setelah selesai:**
 ```bash
+# Buka terminal baru atau:
+source ~/.bashrc   # untuk bash
+source ~/.zshrc    # untuk zsh
+
+# Gunakan langsung:
 groups-list -h
 ```
 
@@ -21,20 +30,16 @@ groups-list -h
 
 ```bash
 cd ~/claude-workspace/linux-groups-list
-./install.sh -p ~/.local/opt
+./install.sh -p ~/.local
 ```
 
-Add to `~/.bashrc`:
-
-```bash
-export PATH="$HOME/.local/opt/bin:$PATH"
-```
+Installer akan otomatis update shell configs.
 
 ### Option 3: Run Directly
 
 ```bash
 cd ~/claude-workspace/linux-groups-list
-./groups-list.sh [options]
+./src/groups-list.sh [options]
 ```
 
 ---

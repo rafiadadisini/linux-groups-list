@@ -30,8 +30,19 @@ sudo ./install.sh             # Ke /usr/local (recommended)
 ./install.sh -p ~/.local      # Ke user directory (no sudo)
 ```
 
-### 5. Gunakan Global (1 menit)
+Installer akan otomatis:
+- ✅ Copy binary ke /usr/local/bin
+- ✅ Update shell config (bash, zsh, fish)
+- ✅ Install shell completions
+- ✅ Buat accessible di PATH
+
+### 5. Restart Terminal & Gunakan
 ```bash
+# Close & open new terminal, atau:
+source ~/.bashrc    # for bash
+source ~/.zshrc     # for zsh
+
+# Then use:
 groups-list -h
 groups-list -n -v
 ```
