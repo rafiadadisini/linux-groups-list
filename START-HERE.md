@@ -6,7 +6,7 @@ Panduan pertama kali menggunakan project setelah refactoring modular.
 
 ### 1. Cek Script (30 detik)
 ```bash
-cd ~/claude-workspace/linux-groups-list
+cd ~/linux-groups-list
 ./src/groups-list.sh -h
 ```
 

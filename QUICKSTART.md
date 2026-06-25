@@ -7,7 +7,7 @@ Panduan cepat untuk memulai menggunakan groups-list.
 ### Option 1: Install ke /usr/local (Recommended)
 
 ```bash
-cd ~/claude-workspace/linux-groups-list
+cd ~/linux-groups-list
 sudo ./install.sh
 ```
 
@@ -29,7 +29,7 @@ groups-list -h
 ### Option 2: Install ke User Directory (No sudo)
 
 ```bash
-cd ~/claude-workspace/linux-groups-list
+cd ~/linux-groups-list
 ./install.sh -p ~/.local
 ```
 
@@ -38,7 +38,7 @@ Installer akan otomatis update shell configs.
 ### Option 3: Run Directly
 
 ```bash
-cd ~/claude-workspace/linux-groups-list
+cd ~/linux-groups-list
 ./src/groups-list.sh [options]
 ```
 
