@@ -37,9 +37,29 @@ sudo ./install.sh
 
 # Install ke custom path (no sudo needed)
 ./install.sh -p ~/.local
+```
 
-# Uninstall
+### 2. Uninstall
+
+```bash
+# Auto-detect dan uninstall (recommended)
+./uninstall.sh
+
+# Uninstall dari custom path
+./uninstall.sh -p ~/.local
+
+# Force uninstall (no confirmation)
+./uninstall.sh -f
+
+# Verbose mode
+./uninstall.sh -v
+```
+
+**Atau gunakan installer script:**
+```bash
+# Legacy method (still works)
 ./install.sh -u
+./install.sh -p ~/.local -u
 ```
 
 **Installer akan otomatis:**
@@ -109,18 +129,14 @@ Entry point yang menggunakan library functions. Script ini:
 
 ### Installer (install.sh)
 
-Script untuk install dan uninstall:
+Script untuk install:
 
 ```bash
 # Install ke /usr/local
-./install.sh
+sudo ./install.sh
 
 # Install ke custom path
 ./install.sh -p /opt/tools
-
-# Uninstall
-./install.sh -u
-./install.sh -p /opt/tools -u
 
 # Help
 ./install.sh -h
@@ -128,11 +144,41 @@ Script untuk install dan uninstall:
 
 Features:
 - Membuat direktori yang diperlukan
-- Copy library files
-- Copy binary files
+- Copy library files dan binary
+- Auto-update shell configs (bash, zsh, fish)
+- Install completions untuk semua shells
 - Set permissions yang benar
 - Patch library path di main script
-- Validasi bahwa files exist sebelum install
+- Validasi files sebelum install
+
+### Uninstaller (uninstall.sh)
+
+Dedicated script untuk uninstall dengan auto-detection:
+
+```bash
+# Auto-detect installation path
+./uninstall.sh
+
+# Specify path jika diperlukan
+./uninstall.sh -p /usr/local
+
+# Force uninstall (no confirmation)
+./uninstall.sh -f
+
+# Verbose output
+./uninstall.sh -v
+
+# Help
+./uninstall.sh -h
+```
+
+Features:
+- **Auto-detect** installation path dari multiple sources
+- Remove binary, library, completions
+- Clean PATH dari shell configs (bash, zsh, fish)
+- Confirmation sebelum uninstall (dapat di-override dengan -f)
+- Aman untuk jalankan multiple times
+- Graceful error handling
 
 ### Deployer (deploy.sh)
 
