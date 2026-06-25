@@ -1,0 +1,32 @@
+# Deployment artifacts
+groups-list.tar.gz
+*.tar.gz
+*.tar
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+*.tmp
+.tmp/
+temp/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS specific
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
